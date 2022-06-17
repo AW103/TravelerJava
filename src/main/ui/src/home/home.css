@@ -1,0 +1,75 @@
+/*
+ * Globals
+ */
+ .homePage{
+  display: block;
+    box-sizing: border-box;
+    text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
+    background-image: url("https://images.unsplash.com/photo-1589519160732-57fc498494f8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    min-width: 100%;
+    min-height: 100vh;
+    font-family: "Montserrat", sans-serif;
+  }
+.homeBtn{
+  border-color: rgb(18, 200, 255);
+  color:rgb(97, 242, 255);
+}
+.homeBtn:hover,
+.homeBtn:focus {
+  background-color:  rgb(1, 61, 182);
+  border-color: rgb(0, 7, 108);
+  color:  rgb(210, 254, 255);
+  text-shadow: none; /* Prevent inheritance from `body` */
+}
+
+.welcome-div {
+  width: 50%;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  margin: 3rem 1rem 1rem 1rem;
+  text-align: center;
+  color: rgb(232, 254, 255);
+}
+.greeting{
+  font-size: 4rem;
+  font-style: italic;
+  margin: 2rem;
+  text-align: center;
+  opacity: 0;
+   animation-name: fadeIn;
+    animation-duration: 4s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+.beginBtn{
+  text-align: center;
+opacity: 0;
+ animation-name: fadeIn;
+  animation-duration: 4s;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@-webkit-keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+
+/*
+ * Base structure
+ */
+
+
+.cover-container {
+  max-width: 42em;
+}

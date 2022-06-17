@@ -1,0 +1,38 @@
+.tripBuilder{
+   background-image: url("https://images.unsplash.com/photo-1589262804704-c5aa9e6def89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2942&q=80");
+   background-repeat: no-repeat;
+   background-size: cover;
+   min-width: 100%;
+   min-height: 100vh;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   color: rgb(58, 50, 50);
+   font-family: "Montserrat", sans-serif;
+}
+.tripBuilderHeader{
+    color: rgb(248, 230, 230);
+    font-size: 5rem;
+    padding-top: 5rem;
+    text-shadow: 0 0.1rem 0.1rem rgba(99, 45, 45, 0.5);
+}
+.tripBuilderMessage{
+    color: rgb(255, 252, 252);
+    text-shadow: 0 0.1rem 0.1rem rgba(99, 45, 45, 0.5);
+    background-color: rgba(55, 18, 18, 0.597);
+    border-radius: 30px;
+    width: 35%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.cardSection{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+}
+

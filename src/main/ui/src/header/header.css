@@ -1,0 +1,59 @@
+/*
+ * Header
+ */
+.navbar-collapse {
+  flex-basis: 100%;
+  flex-grow: 1;
+  align-items: center;
+}
+
+.top {
+  background-image:  linear-gradient(rgb(213, 246, 255),white,rgb(255, 255, 255),rgb(255, 255, 255),rgb(255, 255, 255),rgb(61, 14, 14)  );
+  text-align: left;
+}
+/* .top {
+  background-image:  linear-gradient(rgb(255, 205, 181),rgb(219, 201, 152),rgb(224, 193, 100),rgb(178, 165, 88),rgb(154, 107, 50),rgb(125, 99, 59),rgb(65, 38, 8));
+} */
+/* .top {
+  background-image:  linear-gradient(rgb(214, 255, 190),rgb(125, 205, 78),rgb(91, 151, 56),rgb(55, 142, 96),rgb(50, 112, 154),rgb(29, 57, 104),rgb(8, 16, 65));
+} */
+.brandContainer {
+  padding: 0;
+  margin: 0rem auto 0rem 2rem;
+}
+.brandName{
+  /* margin-left: 2rem; */
+  font-family: "Oleo Script", cursive;
+  font-weight: 400;
+  font-size: 25px;
+  color: rgb(0, 13, 112);
+}
+.navbar {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+a {
+  color: rgb(0, 13, 112);
+}
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link:focus {
+  border-bottom-color: rgba(83, 83, 83, 0.25);
+}
+
+.nav-masthead .nav-link + .nav-link {
+  margin-left: 1rem;
+}
+button.navbar-toggler.collapsed{
+  background-color:  rgb(103, 39, 0);
+  /* border-color:  rgba(68, 97, 53, 0.301); */
+  box-shadow: 2px 2px 2px rgba(98, 33, 13, 0.618);
+}
+
+.nav-masthead .active {
+  color: rgb(103, 39, 0);
+  border-bottom-color:  rgb(103, 39, 0);
+}
+
