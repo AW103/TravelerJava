@@ -1,8 +1,10 @@
 package com.traveler.services.implementation;
 
 import com.traveler.connector.CountriesAPIConnector;
+import com.traveler.connector.WeatherAPIConnector;
 import com.traveler.dtos.CountryResponse;
 import com.traveler.dtos.TripsDto;
+import com.traveler.dtos.WeatherResponse;
 import com.traveler.entities.Trips;
 import com.traveler.entities.User;
 import com.traveler.repositories.TripsRepository;
@@ -26,6 +28,9 @@ public class TripsServiceImpl implements TripsService {
 private CountriesAPIConnector countriesAPIConnector;
 
 @Autowired
+private WeatherAPIConnector weatherAPIConnector;
+
+@Autowired
 private UserRepository userRepository;
 
 @Autowired
@@ -33,6 +38,10 @@ private TripsRepository tripsRepository;
 
     public CountryResponse getCountries() {
        return countriesAPIConnector.connect();
+    }
+
+    public WeatherResponse getWeather(String city, String countryCode) {
+        return weatherAPIConnector.connect(city, countryCode);
     }
 
     @Override
@@ -64,9 +73,6 @@ private TripsRepository tripsRepository;
 
     public Optional<TripsDto> getTripById(Long tripId) {
         Optional<Trips> tripsOptional = tripsRepository.findById(tripId);
-        if(tripsOptional.isPresent()) {
-            return Optional.of(new TripsDto(tripsOptional.get()));
-        }
-        return Optional.empty();
+        return tripsOptional.map(TripsDto::new);
     }
 }

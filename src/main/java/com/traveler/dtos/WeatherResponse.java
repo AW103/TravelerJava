@@ -8,6 +8,8 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class CountryResponse {
-    private JsonNode data;
+public class WeatherResponse {
+    private JsonNode weather;
+    private JsonNode main;
+    private JsonNode cod;
 }

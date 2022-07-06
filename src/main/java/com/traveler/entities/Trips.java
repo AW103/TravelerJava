@@ -27,6 +27,9 @@ public class Trips {
     @Column
     private String city;
 
+    @Column
+    private String countryCode;
+
     @ManyToOne
     @JsonBackReference
     private User user;
@@ -37,6 +40,9 @@ public class Trips {
         }
         if(tripsDto.getCountry() != null) {
             this.country = tripsDto.getCountry();
+        }
+        if(tripsDto.getCountryCode() != null){
+            this.countryCode = tripsDto.getCountryCode();
         }
     }
 }

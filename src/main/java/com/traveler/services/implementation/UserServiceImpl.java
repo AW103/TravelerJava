@@ -45,12 +45,10 @@ public class UserServiceImpl implements UserService {
                     response.add(String.valueOf(userOptional.get().getId()));
                     response.add(userOptional.get().getUsername() + " has been logged in.");
                 } else {
-                    response.add("Error");
-                    response.add("Username or password incorrect");
+                    response.add("Error. Username or password incorrect.");
                 }
             } else {
-                response.add("Error");
-                response.add("Uh oh...error with logging user in.");
+                response.add("Error with logging user in.");
             }
             return response;
         } catch (Exception error) {

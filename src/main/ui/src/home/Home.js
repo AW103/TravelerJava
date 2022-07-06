@@ -5,7 +5,7 @@ import "./home.css";
 const Home = () => {
     const button =
         <div className="beginBtn">
-            <Link to="/tripProfile" className="homeBtn btn btn-outline">
+            <Link to="/login" className="homeBtn btn btn-outline">
                 Let's begin
             </Link>
         </div>

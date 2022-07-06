@@ -9,17 +9,17 @@ const [isRegistered, setIsRegistered] = useState(false)
             username: username,
             password: password
         });
-        console.log(response.data);
+        // console.log(response.data);
         // setUserId(response.data[1]);
         console.log(username);
         response.data.map(res => {
-            console.log("res in map is " + res);
+            // console.log("res in map is " + res);
             if(String(res).includes("Error")){
                 console.log(`first statement hit`);
                 console.log(res);
                 return isRegistered;
         } else {
-            console.log("User registered");
+            // console.log("User registered");
             console.log(res);
             setIsRegistered(true);
             return isRegistered;

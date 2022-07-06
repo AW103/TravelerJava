@@ -16,6 +16,7 @@ public class TripsDto implements Serializable {
     private Long id;
     private String country;
     private String city;
+    private String countryCode;
     private UserDto userDto;
 
     public TripsDto(Trips trips) {
@@ -27,6 +28,9 @@ public class TripsDto implements Serializable {
         }
         if(trips.getCountry() != null){
             this.country = trips.getCountry();
+        }
+        if(trips.getCountryCode() != null) {
+            this.countryCode = trips.getCountryCode();
         }
     }
 }

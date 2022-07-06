@@ -18,6 +18,7 @@ import useRegister from "./register/useRegister";
 const App = () => {
   const [login, authorized, userId] = useLogin("");
   const [register, isRegistered] = useRegister("");
+console.log(`authorized is ${authorized}`);
   console.log(`userId is ${userId}`);
   
 
@@ -25,14 +26,14 @@ const App = () => {
     <main className="appPage">
       <Header userId={userId}/>
       <Routes>
-      <Route path="/" exact element={<Home authenticated={authorized}/>} />
+      <Route path="/" exact element={<Home/>} />
       <Route path="/login" element={<Login login={login} authorized={authorized}/>} />
       <Route path="/register" element={authorized ? <Navigate to="/login"/> : <Register register={register} isRegistered={isRegistered}/>}/>
         <Route path="/tripBuilder" element={<TripBuilder userId={userId} />} />
-        <Route path="/getCountry" element={ <GetCountry />} /> 
+        <Route path="/getCountry" element={<GetCountry />} /> 
         <Route path="/getCity" element={<GetCity />} />
         <Route path="/addTrip" element={<AddTrip />} />
-        <Route path="/tripProfile" element={!authorized ? <Navigate to="/login"/> : <TripProfile  userId={userId} />} />
+        <Route path="/tripProfile" element={<TripProfile  userId={userId}/>} />
       </Routes>
     </main>
   );

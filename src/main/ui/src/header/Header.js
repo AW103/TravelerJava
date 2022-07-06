@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/esm/Container";
@@ -9,18 +10,18 @@ const Header = ({userId}) => {
     <header>
       <Navbar collapseOnSelect className="top" expand="md">
         <Container className="brandContainer container-fluid">
-          <Navbar.Brand className="brandName navbar-brand" href="/">
+          <Link to="/" className="brandName navbar-brand">
             Traveler
-          </Navbar.Brand>
+          </Link>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link className="pageLinks" href="/tripBuilder">
+              <Link to="/tripBuilder" className="pageLinks nav-link">
                 Trip Builder
-              </Nav.Link>
-              <Nav.Link className="pageLinks" href="/tripProfile">
+              </Link>
+              <Link to="/tripProfile" className="pageLinks nav-link">
                 Trips
-              </Nav.Link>
+              </Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
