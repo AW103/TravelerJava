@@ -36,6 +36,5 @@ public class WebClientConfig {
                 .codecs(ClientCodecConfigurer::defaultCodecs)
                 .build();
         return WebClient.builder().baseUrl(urlWeather).exchangeStrategies(strategies).build();
-//        return WebClient.create(urlWeather);
     }
 }
